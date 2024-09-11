@@ -9,6 +9,7 @@ def generate_json():
             {"id": 3, "name": "Charlie", "age": 35}
         ]
     }
+
     time.sleep(2)
     
     return json.dumps(data)
