@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
             method: 'POST'
         }).then(response => {
             if (response.redirected) {
+                // If the backend redirects to a success or error page
                 window.location.href = response.url;
             } else {
-                alert('Failed to execute script');
+                // If there's no redirection, send the user to an error page
+                window.location.href = '/error';
             }
         }).catch(error => {
-            alert('Error: ' + error.message);
+            alert('Error: ' + error.message);  // Optional error handling in case fetch itself fails
         });
     });
 });

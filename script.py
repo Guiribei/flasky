@@ -11,7 +11,7 @@ def generate_json():
     }
 
     time.sleep(2)
-    
+    raise Exception("FAAAIL")
     return json.dumps(data)
 
 if __name__ == "__main__":
